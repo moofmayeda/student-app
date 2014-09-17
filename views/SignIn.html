@@ -8,7 +8,7 @@
             {{item.name}}
             <span ng-show="item.signedin">Signed In</span>
             <span ng-show="!item.signedin">Signed Out</span>
-            <span ng-show="item.date"> at {{item.date}}</span>
+            <span ng-show="item.date"> on {{item.date | date:'medium'}}</span>
           </span>
         </li>
       </ul>
