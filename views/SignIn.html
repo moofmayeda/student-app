@@ -6,9 +6,9 @@
         <li ng-repeat="item in students">
           <span ng-click="StudentsFactory.signin(item)">
             {{item.name}}
-            {{item.date}}
             <span ng-show="item.signedin">Signed In</span>
             <span ng-show="!item.signedin">Signed Out</span>
+            <span ng-show="item.date"> at {{item.date}}</span>
           </span>
         </li>
       </ul>

@@ -13,7 +13,7 @@ studentRoster.factory('StudentsFactory', function StudentsFactory() {
   factory.signin = function(student) {
     var selectedStudent = factory.students[factory.students.indexOf(student)]
     selectedStudent.signedin = selectedStudent.signedin === false ? true: false
-    // selectedStudent.date = new Date();
+    selectedStudent.date = new Date();
   }
 
   return factory;
