@@ -1,10 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2>List Students</h2>
+      <h2 class="col-md-8">List Students</h2>
       <ul>
         <li ng-repeat="item in students">
-          {{item.name}}
+          <span ng-click="StudentsFactory.signin(item)">
+            {{item.name}}
+            {{item.date}}
+            <span ng-show="item.signedin">Signed In</span>
+            <span ng-show="!item.signedin">Signed Out</span>
+          </span>
         </li>
       </ul>
     </div>
